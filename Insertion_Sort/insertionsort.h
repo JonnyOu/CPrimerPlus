@@ -9,10 +9,22 @@
  *
  *
  */
+
+
+//导入stdio包是为了支持size_t
 #include <stdio.h>
 
-void InsertSort(void * , size_t , size_t , int (*Comp)(const void * , const void * ));
+/*
+ * 第一个参数:数组指针
+ * 第二个参数:数组元素个数 
+ * 第三个参数:数组元素大小
+ * 第四个参数:函数指针
+ * 第四个形参是函数指针，主调函数调用InsertSort时，根据数组元素的类型，需要告诉函数要调用哪一个相应的函数，这是目前比较不方便的地方，待改进
+ */
 
+
+
+void InsertSort(void * , size_t , size_t , int (*Comp)(const void * , const void * ));
 
 int CharComp(const void * , const void * );
 
